@@ -12,7 +12,7 @@ const SidebarLink = styled(Link)`
   height: 60px;
   text-decoration: none;
   font-size: 18px;
-
+  overflow :hidden;
   &:hover {
     background: #252831;
     border-left: 4px solid #632ce4;
@@ -46,7 +46,7 @@ const SubMenu = ({ item }) => {
   const showSubnav = () => setSubnav(!subnav);
 
   return (
-    <>
+    <div className='bb1'>
       <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
         <div>
           {item.icon}
@@ -69,7 +69,7 @@ const SubMenu = ({ item }) => {
             </DropdownLink>
           );
         })}
-    </>
+        </div>
   );
 };
 
